@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "chimp": "^0.40.6",
-    "cucumber-assert": "^1.0.4"
+    "cucumber-assert": "^1.0.4",
+    "tape": "^4.6.0"
   }
 }
