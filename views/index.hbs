@@ -1,2 +1,19 @@
-<h1>{{title}}</h1>
-<p>Here's our app.</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div>
+      <form class="get_tweets" id="get_tweets" action="/get_tweets" accept-charset="UTF-8" method="GET">
+        <p>
+          <label for="tweet_keyword">Keyword:</label>
+          <input placeholder="Enter keyword" type="text" name="keyword" id="tweet_keyword" /><br><br>
+          <input type="submit" name="commit" value="Get Tweets" />
+      </p>
+    </form>
+  </div>
+    {{{body}}}
+  </body>
+</html>
