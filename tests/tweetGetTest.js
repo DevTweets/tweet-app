@@ -10,6 +10,7 @@ test('test setup working', function (t) {
 
 test('We got tweets', function(t) {
   var expected = {}
-  t.equal(getTweets(), testData, "Winner winner" )
+  var actual = getTweets()
+  t.equal(actual, testData, "Winner winner" )
   t.end()
 })
