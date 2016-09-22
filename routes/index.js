@@ -10,23 +10,12 @@ router.get('/', function(req, res, next) {
 
 router.get('/tweets/all', function(req, res, next) {
   console.log("Hello")
-  res.render('tweets', { title: 'Tweet App: Avalanche' });
-  // res.render(getTweets())
+
+  twitter.get('lemon')
+    .then(function (tweets) {
+      console.log(tweets);
+      res.render('tweets', { title: 'Tweet App: Avalanche', tweets: tweets });
+    })
 });
 
-// var loadTweets = function(endpoint){
-//    twitter.getTweets()
-//     .then((data) =>{
-//       res.render('index', { body: data })
-//     })
-//     .catch ((error) => {
-//       console.log(error.message);
-//     })
-// }
-
-// loadTweets('search/tweets')
-
-//Get Tweets
-
-
-module.exports = router;
+module.exports = router
