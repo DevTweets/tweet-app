@@ -6,4 +6,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Tweet App: Avalanche' });
 });
 
+router.get('/tweets/all', function(req, res, next) {
+  res.render('tweets', { allTweets: 'Tweets Here' });
+});
+
 module.exports = router;
