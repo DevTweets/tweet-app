@@ -1,20 +1,19 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var exphbs = require('express-handlebars')
-var routes = require('./routes/index');
-var users = require('./routes/users');
-var twitter = require('./routes/apis/twitter');
+var express = require('express')
+var path = require('path')
+var favicon = require('serve-favicon')
+var logger = require('morgan')
+var cookieParser = require('cookie-parser')
+var bodyParser = require('body-parser')
+var routes = require('./routes/index')
+var users = require('./routes/users')
+var twitter = require('./routes/apis/twitter')
+var hbs = require('hbs')
 
-var app = express();
+var app = express()
 
 // view engine setup
-app.engine('handlebars', exphbs({defaultLayout: 'index'}))
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
+app.set('views', path.join(__dirname, 'views'))
+app.set('view engine', 'hbs')
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -60,4 +59,4 @@ app.use(function(err, req, res, next) {
 });
 
 
-module.exports = app;
+module.exports = app
