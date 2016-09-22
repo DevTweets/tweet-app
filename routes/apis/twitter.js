@@ -1,4 +1,6 @@
 require('dotenv').config()
+const router = require('express').Router()
+const _ = require('lodash')
 const Twit = require('twit')
 const T = new Twit({
   consumer_key: process.env.TWITTER_CONSUMER_KEY,
@@ -7,13 +9,17 @@ const T = new Twit({
   access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
 })
 
-const router = require('express').Router()
-const _ = require('lodash')
+function get (keyword) {
+  return T.get('search/tweets', { q: keyword, count: 1 })
+}
 
-T.get('search/tweets', { q: 'donkey', count: 10 }, function(err, data, response) {
-  console.log(data)
-})
+module.exports = {
+    get: get
+}
 
+// get('trees')
+// .then(function(res){
+//   console.log(res.data.statuses);
+// })
 
-
-module.exports = router
+module.exports = router;

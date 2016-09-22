@@ -18,11 +18,13 @@
     "lodash": "^4.16.1",
     "morgan": "~1.7.0",
     "serve-favicon": "~2.3.0",
-    "twit": "^2.2.5"
+    "twit": "^2.2.5",
+    "path": "*"
   },
   "devDependencies": {
+    "chimp": "^0.40.6",
+    "cucumber-assert": "*",
     "tap-spec": "^4.1.1",
-    "tape": "^4.6.0",
-    "chimp": "^0.40.6"
+    "tape": "^4.6.0"
   }
 }
