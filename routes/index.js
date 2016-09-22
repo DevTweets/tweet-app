@@ -11,7 +11,7 @@ const T = new Twit({
 })
 
 function getTweets (keyword) {
-  return T.get('search/tweets', { q: keyword, count: 5 })
+  return T.get('search/tweets', { q: keyword, count: 50 })
 }
 
 /* GET home page. */
@@ -21,7 +21,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/tweets/all', function(req, res, next) {
-  getTweets('something')
+  getTweets('trees')
     .then(function (result) {
       console.log(result.data.statuses)
       return res.render('tweets', { title: 'Tweet App: Avalanche', tweets: result.data.statuses})
