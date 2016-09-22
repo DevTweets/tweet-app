@@ -21,9 +21,9 @@ module.exports = function () {
     browser.click(`input[value="${value}"]`)
   })
 
-  this.Then('I can see the list item "$string"', function (text, callback) {
-    var listItemExists = browser.waitForExist(`li=${text}`)
-    assert.equal(listItemExists, true, callback)
+  this.Then('I can see the h1 "$string"', function (text, callback) {
+    var h1ItemExists = browser.waitForExist(`h1=${text}`)
+    assert.equal(h1ItemExists, true, callback)
   })
 
   this.Then('I am redirected to the "$string" page', function (pathname, callback) {
