@@ -7,7 +7,6 @@ const T = new Twit({
   access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
 })
 
-console.log(process.env);mac os
 const router = require('express').Router()
 const _ = require('lodash')
 
