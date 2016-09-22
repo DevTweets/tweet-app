@@ -1,4 +1,5 @@
 var express = require('express')
+var hbs = require('express-handlebars')
 var path = require('path')
 var favicon = require('serve-favicon')
 var logger = require('morgan')
@@ -7,11 +8,12 @@ var bodyParser = require('body-parser')
 var routes = require('./routes/index')
 var users = require('./routes/users')
 var twitter = require('./routes/apis/twitter')
-var hbs = require('hbs')
+var _ = require('lodash')
 
 var app = express()
 
 // view engine setup
+app.engine('hbs', hbs({extname:'hbs', defaultLayout: 'main', layoutsDir: __dirname + '/views/layouts'}))
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'hbs')
 
