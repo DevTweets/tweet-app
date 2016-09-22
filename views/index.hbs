@@ -5,8 +5,9 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+    <h1>{{title}}</h1>
     <div>
-      <form class="get_tweets" id="get_tweets" action="/get_tweets" accept-charset="UTF-8" method="GET">
+      <form class="get_tweets" id="get_tweets" action="/tweets/all" accept-charset="UTF-8" method="GET">
         <p>
           <label for="tweet_keyword">Keyword:</label>
           <input placeholder="Enter keyword" type="text" name="keyword" id="tweet_keyword" /><br><br>
