@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var twitter = require('./apis/twitter')
+var _ = require('lodash')
 // twitter API
 const Twit = require('twit')
 const T = new Twit({
@@ -22,6 +23,9 @@ router.get('/', function(req, res, next) {
 router.get('/tweets/all', function(req, res, next) {
   getTweets(req.query.keyword)
     .then(function (result) {
+      var cleanStatuses = _.map()
+      console.log(result.data.statuses)
+
       return res.render('tweets', { title: 'Tweet App: Avalanche', tweets: result.data.statuses})
     })
 });
