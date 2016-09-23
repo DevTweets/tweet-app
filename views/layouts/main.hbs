@@ -2,18 +2,23 @@
 <html>
   <head>
     <title>{{title}}</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css' />
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1>{{title}}</h1>
-    <div>
+    <h1 class='logo'>{{title}}</h1>
+    <div class='form'>
       <form class="get_tweets" id="get_tweets" action="/tweets/all" accept-charset="UTF-8" method="GET">
         <p>
-          <label for="tweet_keyword">Keyword:</label>
-          <input placeholder="Enter keyword" type="text" name="keyword" id="tweet_keyword" /><br><br>
-          <input type="submit" name="commit" value="Get Tweets" />
+          <!-- <label for="tweet_keyword"></label> -->
+          <input class='keyword' placeholder="Enter keyword" type="text" name="keyword" id="tweet_keyword" /><br><br>
+          <input class='button' type="submit" name="commit" value="Get Tweets" />
       </p>
     </form>
+  </div>
+  <div>
+    <input class='button' type="submit" name="filter" value="Happy" />
+    <input class='button' type="submit" name="filter" value="sad" />
   </div>
     {{{body}}}
   </body>

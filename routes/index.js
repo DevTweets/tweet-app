@@ -16,8 +16,7 @@ function getTweets (keyword) {
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('tweets', { title: 'Tweet App: Avalanche' });
-  // res.render(getTweets())
+  res.render('tweets', { title: 'Avalanche' });
 });
 
 router.get('/tweets/all', function(req, res, next) {

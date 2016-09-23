@@ -1,8 +1,27 @@
 body {
+  background: url('../images/avalanche.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
-
 a {
   color: #00B7FF;
+}
+.logo{
+  color: #fff;
+  text-align: center;
+  min-height: 20vh;
+}
+.form{
+  max-width: 1200px;
+  text-align: center;
+}
+input.button{
+  background-color: #fff;
+}
+input.keyword{
+  opacity: 0.9;
+  width: 30vw;
+  height: 4vh;
+
 }
