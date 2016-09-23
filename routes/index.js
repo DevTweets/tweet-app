@@ -20,20 +20,10 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/tweets/all', function(req, res, next) {
-  getTweets('trees')
+  getTweets(req.query.keyword)
     .then(function (result) {
-      console.log(result.data.statuses)
       return res.render('tweets', { title: 'Tweet App: Avalanche', tweets: result.data.statuses})
     })
-    // .then(function (data) {
-    //   res.render('tweets', { title: 'Tweet App: Avalanche', tweets: data})
-    // })
 });
 
 module.exports = router
-
-// twitter.get('lemon')
-//   .then(function (tweets) {
-//     var data = tweets[0].text
-//     res.render('tweets', { title: 'how about this', tweets: data });
-//   })
