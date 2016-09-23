@@ -23,5 +23,13 @@ input.keyword{
   opacity: 0.9;
   width: 30vw;
   height: 4vh;
-
+}
+table {
+  border-radius: 7px 7px 7px 7px;
+  -moz-border-radius: 7px 7px 7px 7px;
+  -webkit-border-radius: 7px 7px 7px 7px;
+  border: 2px solid #000000;
+  background: white;
+  opacity: 0.6;
+  padding:10px;
 }
