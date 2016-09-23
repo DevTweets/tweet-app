@@ -16,6 +16,19 @@ a {
   max-width: 1200px;
   text-align: center;
 }
+
+input,
+label {
+  display: inline-block;
+}
+
+label {
+  font-size: 18px;
+  color: blue;
+  background: white;
+}
+
+
 input.button{
   background-color: #fff;
 }
@@ -24,4 +37,9 @@ input.keyword{
   width: 30vw;
   height: 4vh;
 
+}
+
+#happy,
+#sad {
+  display: inline-block;
 }
