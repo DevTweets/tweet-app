@@ -9,16 +9,13 @@
     <h1 class='logo'>{{title}}</h1>
     <div class='form'>
       <form class="get_tweets" id="get_tweets" action="/tweets/all" accept-charset="UTF-8" method="GET">
-        <p>
-          <!-- <label for="tweet_keyword"></label> -->
-          <input class='keyword' placeholder="Enter keyword" type="text" name="keyword" id="tweet_keyword" /><br><br>
-          <input class='button' type="submit" name="commit" value="Get Tweets" />
-      </p>
+          <input class='keyword' placeholder="Enter keyword" type="text" name="keyword" id="tweet_keyword"><br><br>
+          <label for="happy">Happy</label>
+          <input type="radio" name="filter" value="Happy" id="happy">
+          <label for="sad">Sad</label>
+          <input type="radio" name="filter" value="sad" id="sad">
+          <input class='button two' type="submit" name="commit" value="Get Tweets">
     </form>
-  </div>
-  <div>
-    <input class='button' type="submit" name="filter" value="Happy" />
-    <input class='button' type="submit" name="filter" value="sad" />
   </div>
     {{{body}}}
   </body>

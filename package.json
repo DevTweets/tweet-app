@@ -5,7 +5,7 @@
   "scripts": {
     "tape-test": "tape 'tests/tweetGetTest.js' | tap-spec",
     "test": "chimp --watch",
-    "start": "node ./bin/www"
+    "start": "nodemon ./bin/www"
   },
   "dependencies": {
     "body-parser": "~1.15.1",
@@ -17,9 +17,10 @@
     "hbs": "~4.0.0",
     "lodash": "^4.16.1",
     "morgan": "~1.7.0",
+    "nodemon": "^1.10.2",
+    "path": "*",
     "serve-favicon": "~2.3.0",
-    "twit": "^2.2.5",
-    "path": "*"
+    "twit": "^2.2.5"
   },
   "devDependencies": {
     "chimp": "^0.40.6",
