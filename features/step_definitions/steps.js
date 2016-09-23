@@ -12,6 +12,10 @@ module.exports = function () {
     // real world example below
     // browser.url(Url.format(extend(config.proxy, { pathname: pathname })))
   })
+  this.Given('I can see the input with the value "$string"', function (text, callback) {
+    var listItemExists = browser.waitForExist(`input[value=${text}]`)
+    assert.equal(listItemExists, true, callback)
+  })
 
   this.When('I enter "$string" into the "$string" input', function (value, name) {
     browser.setValue(`input[placeholder="${name}"]`, value)
