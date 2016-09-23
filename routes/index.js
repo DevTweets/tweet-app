@@ -10,6 +10,10 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/tweets/all', function(req, res, next) {
+  // if we were to have client-side rendering
+  // if (req.query === '') {
+  //   return
+  // } else {
   getTweets(req.query.keyword)
     .then(function (result) {
       console.log(result.data.statuses)
@@ -18,6 +22,7 @@ router.get('/tweets/all', function(req, res, next) {
       })
       return res.render('tweets', { title: 'Avalanche', tweets: cleanTweets})
     })
-});
+  // }
+})
 
 module.exports = router

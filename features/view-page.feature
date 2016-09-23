@@ -1,4 +1,4 @@
-Feature: View tweets
+Feature: View tweets/Search tweets
 
 @watch
   Scenario: I want to see my searched tweets
@@ -7,3 +7,4 @@ Feature: View tweets
     When I enter "cheese" into the "Enter keyword" input
     And I click on the input with value "Get Tweets"
     Then I am redirected to the "/tweets/all" page
+    And I can see a td with text "cheese"

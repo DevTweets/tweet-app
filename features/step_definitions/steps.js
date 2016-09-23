@@ -30,6 +30,11 @@ module.exports = function () {
     assert.equal(h1ItemExists, true, callback)
   })
 
+  this.Then('I can see a td with text "$string"', function (text, callback) {
+    var tdItemExists = browser.waitForExist(`td=${text}`)
+    assert.equal(tdItemExists, true, callback)
+  })
+
   this.Then('I am redirected to the "$string" page', function (pathname, callback) {
     browser.waitForExist('body')
     var url = browser.getUrl()
