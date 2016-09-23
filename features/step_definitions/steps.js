@@ -30,8 +30,8 @@ module.exports = function () {
     assert.equal(h1ItemExists, true, callback)
   })
 
-  this.Then('I can see a td with text "$string"', function (text, callback) {
-    var tdItemExists = browser.waitForExist(`td=${text}`)
+  this.Then('I can see a td', function (callback) {
+    var tdItemExists = browser.waitForExist('td')
     assert.equal(tdItemExists, true, callback)
   })
 
