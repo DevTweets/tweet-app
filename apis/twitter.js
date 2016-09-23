@@ -1,5 +1,4 @@
 require('dotenv').config()
-const router = require('express').Router()
 const _ = require('lodash')
 const Twit = require('twit')
 const T = new Twit({
@@ -10,16 +9,12 @@ const T = new Twit({
 })
 
 function get (keyword) {
-  return T.get('search/tweets', { q: keyword, count: 1 })
+  return T.get('search/tweets', { q: keyword, count: 20 })
 }
 
-module.exports = {
-    get: get
-}
+module.exports = get
 
 // get('trees')
 // .then(function(res){
 //   console.log(res.data.statuses);
 // })
-
-module.exports = router;
