@@ -14,3 +14,10 @@ test('We got tweets', function(t) {
   t.equal(actual, testData, "Winner winner" )
   t.end()
 })
+
+test('We got tweets happy', function(t) {
+  var expected = {}
+  var actual = getTweets()
+  t.equal(actual, testData, "Winner winner" )
+  t.end()
+})

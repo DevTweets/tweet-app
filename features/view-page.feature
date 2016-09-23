@@ -1,7 +1,7 @@
 Feature: View tweets
 
-  @watch
-  Scenario: I want to see all the people
+@watch
+  Scenario: I want to see my searched tweets
     Given I am viewing the page at "/"
     Then I can see the h1 "Avalanche"
     When I enter "cheese" into the "Enter keyword" input
