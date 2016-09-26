@@ -97,7 +97,6 @@ module.exports = {
         "screen_name": "sean_cummings"
       },
       "in_reply_to_screen_name": null,
-      "source": "<a href="//itunes.apple.com/us/app/twitter/id409789998?mt=12%5C%22" rel="\"nofollow\"">Twitter for Mac</a>",
       "in_reply_to_status_id": null
     },
     {
@@ -397,7 +396,6 @@ module.exports = {
         "screen_name": "Omnitarian"
       },
       "in_reply_to_screen_name": null,
-      "source": "<a href="//twitter.com/download/iphone%5C%22" rel="\"nofollow\"">Twitter for iPhone</a>",
       "in_reply_to_status_id": null
     }
   ],
